@@ -4,6 +4,7 @@
 {
     'name': 'Set Password on Email Document',
     'category': 'Enhancement',
+    'summary':'Easily protect the template attachment (PDF/Excel) by setting password.',
     'description': """
 A module that provide support to set password on email template document.
 =====================================
@@ -16,4 +17,5 @@ This module gives the opportunity to make the reports(pdf/excel attachment) prot
     'author':'arpit',
     'installable': True,
     'application': True,
+    'images':['static/description/Banner.jpg']
 }
