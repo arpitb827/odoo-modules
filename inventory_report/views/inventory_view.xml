@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_wizard_valuation_history" model="ir.ui.view">
+        <field name="name">Inventory at Date</field>
+        <field name="model">wizard.valuation.history</field>
+        <field name="inherit_id" ref="stock_account.view_wizard_valuation_history"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//group[1]" position="replace">
+                <group col="4">
+                    <field name="choose_date"/>
+                     <field name="need_export" invisible="0"/>
+                    <field name="date" attrs="{'invisible': [('choose_date', '=', False)]}"/>
+
+                    <field name="filename" readonly="1"  invisible="1" attrs="{'invisible':[('need_export','=',False)]}"/>
+                    <field name="document" readonly="1" filename='filename'  attrs="{'invisible':[('document','=',False)]}"/>
+                </group>
+            </xpath>
+            
+        </field>
+    </record>
+    
+</odoo>
